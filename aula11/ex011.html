@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11 - javaScript</title>
+</head>
+<body>
+    Qual seu país? <input type="text" name="txtPais" id="txtPais">
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id = 'res'></div>
+
+    <script>
+        function verificar(){
+            var txt = window.document.querySelector('input#txtPais');
+            var res = window.document.querySelector('div#res');
+            var pais = (txtPais.value);
+
+            if (pais == 'Brasil'){
+                res.innerHTML += 'Você é <strong>Brasileiro</strong><br/>';
+            }
+            else {
+                res.innerHTML += 'Você é <strong>Estrangeiro</strong><br/>';
+            }
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10 - javaScript</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do Carro: <input type="number" name="txtVelocidade" id="txtVelocidade">Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular(){
+            var txtVel = window.document.querySelector("input#txtVelocidade");    
+            var res = window.document.querySelector("div#resultado");
+            var vel = Number(txtVel.value);
+
+            /*
+            if (vel > 60){
+                res.innerHTML += `<p> <strong>MULTADO</strong> </p>`
+            }
+            
+            res.innerHTML = `<p><strong>Sua velocidade é de ${vel} Km/h</strong></p>`;
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança!`;
+            */
+
+            if (vel > 60) {
+                res.innerHTML+= `<p>você está <strong>multado!</strong></p>`
+            }
+            res.innerHTML = `<p><strong>Sua velocidade é de ${vel} Km/h</strong></p>`;
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+    </script>
+</body>
+</html>
