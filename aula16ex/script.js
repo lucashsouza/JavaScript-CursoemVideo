@@ -5,10 +5,16 @@ let valores = [];
 
 function adicionar(){
     if (isNumero(numero.value) && !inLista(numero.value, valores)){
-        window.alert("Tudo ok");
+        valores.push(Number(numero.value));
+        let item = document.createElement('option');
+        item.text = `Valor ${numero.value} adicionado.`
+        lista.appendChild(item);
     } else {
         window.alert("Valor inválido ou já encontrado na lista.");
     }
+    numero.value = '';
+    numero.focus();
+
 }
 
 // param: n=numero
